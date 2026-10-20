@@ -1,0 +1,3 @@
+[console_scripts]
+pdf2htmlEX-deb13-py = pdf2htmlex_py.cli:main
+

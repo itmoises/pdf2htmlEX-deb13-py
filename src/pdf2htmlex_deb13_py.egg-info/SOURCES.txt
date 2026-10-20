@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/pdf2htmlex_deb13_py.egg-info/PKG-INFO
+src/pdf2htmlex_deb13_py.egg-info/SOURCES.txt
+src/pdf2htmlex_deb13_py.egg-info/dependency_links.txt
+src/pdf2htmlex_deb13_py.egg-info/entry_points.txt
+src/pdf2htmlex_deb13_py.egg-info/top_level.txt
+src/pdf2htmlex_py/__init__.py
+src/pdf2htmlex_py/cli.py
+src/pdf2htmlex_py/engine.py
