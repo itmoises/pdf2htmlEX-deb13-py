@@ -10,6 +10,15 @@ usar imágenes de fondo para conservar la composición compleja del PDF.
 - Docker Desktop instalado y en ejecución. En Windows, usa el backend WSL 2 recomendado por Docker Desktop.
 - Git, para descargar este proyecto y el motor `pdf2htmlEX`.
 
+### Descargar e instalar los requisitos
+
+- **Python:** [python.org/downloads](https://www.python.org/downloads/). Descarga el instalador para tu sistema operativo. En Windows, durante la instalación marca **Add Python to PATH** si aparece esa opción.
+- **Docker Desktop para macOS:** [guía e instalador oficial](https://docs.docker.com/desktop/setup/install/mac-install/). Elige la versión para Apple silicon o Intel según tu Mac.
+- **Docker Desktop para Windows:** [guía e instalador oficial](https://docs.docker.com/desktop/setup/install/windows-install/). Se recomienda el backend WSL 2.
+- **Git:** [git-scm.com/downloads](https://git-scm.com/downloads). Git es opcional si descargas los proyectos como ZIP.
+
+Después de instalar Docker Desktop, ábrelo y espera a que indique que Docker está en ejecución antes de continuar.
+
 La compilación ocurre en un contenedor Debian 13 Trixie, así se evita depender de las
 versiones de Poppler y FontForge instaladas en el sistema anfitrión. La imagen creada se llama
 `pdf2htmlex-deb13-py:local` por defecto.
@@ -20,15 +29,37 @@ checkout.
 
 ## Descargar los proyectos
 
-En una terminal, crea o elige una carpeta de trabajo y descarga ambos repositorios
-en carpetas hermanas. Los comandos de Git son iguales en macOS, PowerShell y
-Windows Terminal:
+Descarga los dos proyectos dentro de una misma carpeta de trabajo, de modo que
+queden como carpetas hermanas. Puedes usar Git o descargar los ZIP directamente.
+
+### Opción A: con Git
+
+Instala Git desde el enlace anterior y ejecuta estos comandos en Terminal
+(macOS) o PowerShell/Windows Terminal (Windows):
 
 ```bash
 mkdir proyectos
 cd proyectos
 git clone https://github.com/pdf2htmlEX/pdf2htmlEX.git
 git clone https://github.com/itmoises/pdf2htmlEX-deb13-py.git
+```
+
+### Opción B: descarga directa, sin Git
+
+Descarga los ZIP desde GitHub:
+
+- [Motor pdf2htmlEX (ZIP)](https://github.com/pdf2htmlEX/pdf2htmlEX/archive/refs/heads/master.zip)
+- [Interfaz pdf2htmlEX-deb13-py (ZIP)](https://github.com/itmoises/pdf2htmlEX-deb13-py/archive/refs/heads/main.zip)
+
+Extrae ambos ZIP dentro de la misma carpeta `proyectos`. GitHub agrega el nombre
+de la rama al nombre de cada carpeta extraída; renómbralas a `pdf2htmlEX` y
+`pdf2htmlEX-deb13-py`, respectivamente, para que coincidan con los comandos de
+esta guía. La estructura debe quedar así:
+
+```text
+proyectos/
+├── pdf2htmlEX/
+└── pdf2htmlEX-deb13-py/
 ```
 
 ## Instalar y compilar
